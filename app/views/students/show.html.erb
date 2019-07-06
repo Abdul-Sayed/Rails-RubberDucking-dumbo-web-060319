@@ -1,0 +1,16 @@
+<h1>Student Details</h1>
+
+<h3>Name: <%= @student.name %> in mod <%= @student.mod %></h3>
+
+<p><%= link_to 'Edit Student Details', edit_student_path(@student.id) %></p>
+
+<h5>List of ducks owned by <%= @student.name %>: </h5>
+
+<ul>
+  <% @student.ducks.each do |duck| %>
+    <li>
+       <%= duck.name %>
+    </li>
+  <% end %>
+</ul>
+

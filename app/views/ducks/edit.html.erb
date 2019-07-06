@@ -1,0 +1,12 @@
+<h1>Edit Duck</h1>
+
+<% form_for @duck do |f|%>
+
+  <%= f.label 'Name' %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label 'Description' %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>List of Ducks</h1>
+
+<%= link_to 'Create new duck',  new_duck_path%>
+
+<ul>
+  <% @ducks.each do |duck| %>
+    <li>
+       <%= link_to "#{duck.name}", duck_path(duck.id) %>
+    </li>
+  <% end %>
+</ul>
